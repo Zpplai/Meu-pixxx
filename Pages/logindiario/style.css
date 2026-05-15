@@ -1,0 +1,54 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Roboto, sans-serif; }
+body { background-color: #000; color: #fff; display: flex; justify-content: center; min-height: 100vh; overflow-x: hidden; }
+.app-container { width: 100%; max-width: 420px; padding: 25px; }
+
+/* Saldo */
+.saldo-card { background: #080808; border: 1px solid #151515; padding: 30px; border-radius: 28px; text-align: center; margin-bottom: 35px; }
+.saldo-card p { color: #555; font-size: 0.7rem; letter-spacing: 2px; margin-bottom: 8px; font-weight: bold; }
+.saldo-card h2 { color: #00ff88; font-size: 2.8rem; text-shadow: 0 0 20px rgba(0, 255, 136, 0.2); }
+
+/* Header */
+.header-nav { display: flex; align-items: center; gap: 15px; margin-bottom: 30px; }
+.btn-voltar { background: #111; border: none; padding: 12px; border-radius: 14px; cursor: pointer; display: flex; align-items: center; }
+.header-nav h1 { font-size: 1.2rem; font-weight: 500; color: #eee; }
+
+/* Calendário */
+.calendario-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 40px; }
+.dia-card { background: #0a0a0a; border: 1px solid #1a1a1a; border-radius: 20px; padding: 22px 5px; text-align: center; transition: 0.3s; }
+.dia-card span { font-size: 0.75rem; font-weight: 600; color: #333; }
+
+/* Estados do Calendário */
+.dia-card.concluido { border-color: #00ff88; background: rgba(0, 255, 136, 0.05); }
+.dia-card.concluido span { color: #00ff88; }
+.dia-card.concluido .icon::after { content: '✔'; color: #00ff88; display: block; font-size: 12px; margin-top: 5px; }
+
+.dia-card.perdeu { border-color: #ff4444; background: rgba(255, 68, 68, 0.05); }
+.dia-card.perdeu span { color: #ff4444; }
+
+.dia-card.hoje { border-color: #fff; background: #111; box-shadow: 0 0 15px rgba(255, 255, 255, 0.05); }
+.dia-card.hoje span { color: #fff; }
+
+/* Botão e Recompensa */
+.action-area { text-align: center; }
+#recompensa-valor { font-size: 2rem; margin-bottom: 15px; color: #fff; }
+.btn-principal { width: 100%; padding: 22px; border-radius: 22px; border: none; background: #151515; color: #444; font-weight: bold; font-size: 1rem; cursor: not-allowed; transition: 0.4s; }
+.btn-principal.ativo { background: #00ff88; color: #000; cursor: pointer; box-shadow: 0 10px 25px rgba(0, 255, 136, 0.2); }
+
+/* Overlay de Animação */
+#container-animacao { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.96); z-index: 1000; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(10px); }
+.overlay-content { text-align: center; animation: fadeIn 0.5s ease; }
+.moeda-animada { font-size: 90px; margin-bottom: 20px; animation: bounce 0.8s infinite alternate; }
+.ganho-destaque { color: #00ff88; font-size: 2.2rem; font-weight: bold; display: block; margin: 15px 0; }
+.btn-fechar-link { background: transparent; border: 1px solid #333; color: #777; padding: 12px 35px; border-radius: 40px; cursor: pointer; margin-top: 30px; font-size: 0.9rem; }
+.hidden { display: none !important; }
+
+@keyframes bounce { from { transform: translateY(0); } to { transform: translateY(-25px); } }
+@keyframes fadeIn { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
+
+/* Isso impede que o celular fique tentando "selecionar" o texto do botão para pesquisar */
+.btnValor, #btnSacar, h1, h2, p, .bottomNav a {
+    user-select: none; /* Impede a seleção de texto */
+    -webkit-user-select: none;
+    -webkit-touch-callout: none; /* Impede o menu de contexto no iPhone */
+}
+
