@@ -1,0 +1,92 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial;
+}
+
+body{
+  background:#0f0f0f;
+  color:white;
+}
+
+.splash{
+  width:100%;
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+
+.logo{
+  font-size:70px;
+  margin-bottom:15px;
+  animation:flutuar 2s infinite ease-in-out;
+}
+
+h1{
+  color:#00ff88;
+  font-size:40px;
+  margin-bottom:10px;
+}
+
+p{
+  color:#999;
+  margin-bottom:30px;
+}
+
+.progress-box{
+  width:260px;
+  height:12px;
+  background:#222;
+  border-radius:20px;
+  overflow:hidden;
+  margin-bottom:30px;
+}
+
+.progress{
+  width:0%;
+  height:100%;
+  background:#00ff88;
+  border-radius:20px;
+  animation:carregar 4s forwards;
+}
+
+#installBtn{
+  display:none;
+  padding:14px 30px;
+  border:none;
+  border-radius:15px;
+  background:#00ff88;
+  color:#000;
+  font-size:16px;
+  font-weight:bold;
+}
+
+@keyframes carregar{
+  to{
+    width:100%;
+  }
+}
+
+@keyframes flutuar{
+  50%{
+    transform:translateY(-10px);
+  }
+}
+.splash{
+  transition:1s;
+}
+
+.sumir{
+  opacity:0;
+  transform:scale(1.1);
+}
+
+/* Isso impede que o celular fique tentando "selecionar" o texto do botão para pesquisar */
+.btnValor, #btnSacar, h1, h2, p, .bottomNav a {
+    user-select: none; /* Impede a seleção de texto */
+    -webkit-user-select: none;
+    -webkit-touch-callout: none; /* Impede o menu de contexto no iPhone */
+}
