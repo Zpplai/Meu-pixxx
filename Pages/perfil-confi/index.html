@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Perfil | Ganhe-Pix</title>
+    <link rel="stylesheet" href="perfil.css">
+</head>
+<body>
+    <div id="loader" class="loader-container"><div class="spinner"></div></div>
+
+    <div class="app-container">
+        <header class="user-header">
+            <div class="avatar-container">
+                <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png">
+            </div>
+            <h2 id="nome-user">Carregando...</h2>
+            <span class="badge-status">CONTA VERIFICADA</span>
+        </header>
+
+        <h3 class="section-title">Minhas Informações</h3>
+        <div class="actions-grid">
+            <div class="card-item">
+                <div class="card-icon">📧</div>
+                <div class="card-info"><p>Gmail Logado</p><h4 id="email-user">--</h4></div>
+            </div>
+            <div class="card-item">
+                <div class="card-icon">🎂</div>
+                <div class="card-info"><p>Idade</p><h4 id="idade-user">--</h4></div>
+            </div>
+            <div class="card-item" id="btn-abrir-edicao" style="cursor: pointer; border: 1px solid #00ff88;">
+                <div class="card-icon">🏦</div>
+                <div class="card-info"><p>Banco (Toque para editar)</p><h4 id="banco-user">--</h4></div>
+            </div>
+            <div class="card-item">
+                <div class="card-icon">🔑</div>
+                <div class="card-info"><p>Sua Chave Pix</p><h4 id="chave-user">--</h4></div>
+            </div>
+        </div>
+        <button id="btn-sair" class="outline-button">Sair da Conta</button>
+    </div>
+
+    <div id="modal-edicao" class="modal hidden">
+        <div class="modal-content">
+            <h3>Atualizar Pix</h3>
+            <div class="input-group">
+                <label>Novo Banco:</label>
+                <input type="text" id="edit-banco" placeholder="Ex: Nubank">
+            </div>
+            <div class="input-group">
+                <label>Tipo de Chave:</label>
+                <select id="edit-tipo-chave">
+                    <option value="CPF">CPF</option>
+                    <option value="Celular">Celular</option>
+                    <option value="CNPJ">CNPJ</option>
+                    <option value="Gmail">Gmail</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label>Nova Chave Pix:</label>
+                <input type="text" id="edit-chave" inputmode="numeric" placeholder="Digite apenas números">
+            </div>
+            <div class="modal-actions">
+                <button id="btn-cancelar" class="btn-secundario">Cancelar</button>
+                <button id="btn-salvar-pix" class="btn-primario">Salvar Alteração</button>
+            </div>
+        </div>
+    </div>
+
+    <nav class="bottom-tab-bar">
+        <div class="tab-item" onclick="window.location.href='../home/index.html'"><span class="tab-icon">🏠</span><span class="tab-label">Início</span></div>
+        <div class="tab-item" onclick="window.location.href='../saque/index.html'"><span class="tab-icon">💎</span><span class="tab-label">Saque</span></div>
+        <div class="tab-item active"><span class="tab-icon">👤</span><span class="tab-label">Perfil</span></div>
+    </nav>
+    <script type="module" src="perfil.js"></script>
+</body>
+</html>
