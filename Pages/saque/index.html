@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Saque PIX</title>
+
+<link rel="stylesheet"
+href="style.css">
+
+</head>
+<body>
+
+<div class="container">
+
+<!-- 1 - VOLTAR -->
+<button id="voltar">
+← Voltar
+</button>
+
+
+
+<!-- 2 - TÍTULO -->
+<h1>
+Saque PIX
+</h1>
+
+
+
+<!-- 3 - SALDO -->
+<div class="saldoBox">
+
+<p>
+Seu saldo
+</p>
+
+<h2 id="saldo">
+R$0,00
+</h2>
+
+</div>
+
+
+
+
+<!-- 4 - HISTÓRICO -->
+<button id="btnHistorico">
+
+📜 Histórico
+
+</button>
+
+
+
+
+
+<!-- 5 - VALORES -->
+<div class="saques">
+
+<button
+class="btnValor"
+data-valor="5">
+
+R$5
+
+</button>
+
+
+<button
+class="btnValor"
+data-valor="10">
+
+R$10
+
+</button>
+
+
+<button
+class="btnValor"
+data-valor="25">
+
+R$25
+
+</button>
+
+
+<button
+class="btnValor"
+data-valor="50">
+
+R$50
+
+</button>
+
+
+<button
+class="btnValor"
+data-valor="100">
+
+R$100
+
+</button>
+
+</div>
+
+
+
+
+
+<!-- 6 - BOTÃO -->
+<button id="btnSacar">
+
+Solicitar saque
+
+</button>
+
+</div>
+
+
+
+
+
+
+<!-- 7 - MODAL SAQUE -->
+
+<div class="modal"
+id="modal">
+
+<div class="modalContent">
+
+<h2>
+Confirmar saque
+</h2>
+
+
+
+
+<!-- DADOS -->
+
+<div class="cardInfo">
+
+<span>
+Nome
+</span>
+
+<h3 id="nome">
+Carregando...
+</h3>
+
+</div>
+
+
+
+<div class="cardInfo">
+
+<span>
+Banco
+</span>
+
+<h3 id="banco">
+Carregando...
+</h3>
+
+</div>
+
+
+
+<div class="cardInfo">
+
+<span>
+PIX
+</span>
+
+<h3 id="pix">
+Carregando...
+</h3>
+
+</div>
+
+
+
+
+
+<!-- EDITAR -->
+<button id="editarPix">
+
+Corrigir dados
+
+</button>
+
+
+
+
+
+<!-- TERMOS -->
+<div class="termos">
+
+<button id="verTermos">
+
+Ver termos
+
+</button>
+
+</div>
+
+
+
+
+
+<!-- TERMOS ESCONDIDOS -->
+<div
+class="termosHidden"
+id="termosHidden">
+
+<p>
+• O pagamento pode demorar
+</p>
+
+<p>
+• Não existe reembolso
+</p>
+
+<p>
+• Apenas 1 saque por dia
+</p>
+
+<p>
+• Dados errados são responsabilidade do usuário
+</p>
+
+</div>
+
+
+
+
+
+<!-- CHECK -->
+<label class="checkTermos">
+
+<input
+type="checkbox"
+id="aceitarTermos">
+
+<span>
+Li e aceito os termos
+</span>
+
+</label>
+
+
+
+
+
+<!-- MENSAGEM -->
+<div id="mensagem"></div>
+
+
+
+
+
+<!-- CONFIRMAR -->
+<button id="confirmarSaque">
+
+Confirmar saque
+
+</button>
+
+
+
+<!-- CANCELAR -->
+<button id="cancelar">
+
+Cancelar
+
+</button>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+<!-- 8 - MODAL HISTÓRICO -->
+
+<div class="modal"
+id="modalHistorico">
+
+<div class="modalContent">
+
+<h2>
+Histórico
+</h2>
+
+<div id="listaHistorico">
+
+</div>
+
+<button id="fecharHistorico">
+
+Fechar
+
+</button>
+
+</div>
+
+</div>
+
+
+
+
+
+
+<!-- 9 - MENU -->
+
+<div class="bottomNav">
+
+<a href="../home/index.html">
+
+🏠
+<span>Início</span>
+
+</a>
+
+
+
+<a
+href="../saque/index.html"
+class="active">
+
+💎
+<span>Saque</span>
+
+</a>
+
+
+
+<a href="../perfil/index.html">
+
+👤
+<span>Perfil</span>
+
+</a>
+
+</div>
+
+
+
+
+
+<script
+type="module"
+src="script.js"></script>
+
+</body>
+</html>
