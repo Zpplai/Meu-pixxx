@@ -1,0 +1,132 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+body { background-color: #000; color: #fff; overflow-x: hidden; }
+
+.app-container {
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 25px;
+    padding-bottom: 110px;
+}
+
+/* Card de Saldo - Grande e Chamativo */
+.balance-card {
+    background: linear-gradient(135deg, #00ff88 0%, #008855 100%);
+    padding: 40px 20px;
+    border-radius: 32px;
+    text-align: center;
+    color: #000;
+    margin-bottom: 35px;
+    box-shadow: 0 15px 35px rgba(0, 255, 136, 0.25);
+}
+
+#saudacao-user {
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+    color: rgba(0,0,0,0.75);
+    display: block;
+}
+
+.balance-card p { font-size: 0.85rem; font-weight: 800; opacity: 0.9; letter-spacing: 1.5px; }
+.balance-card h1 { font-size: 3.2rem; font-weight: 900; margin: 8px 0; }
+
+.status-pill { 
+    display: inline-block; 
+    background: rgba(0, 0, 0, 0.15); 
+    padding: 8px 18px; 
+    border-radius: 25px; 
+    font-size: 0.85rem; 
+    font-weight: bold; 
+}
+
+/* Título da Seção */
+.section-title { color: #888; font-size: 1.1rem; margin-bottom: 20px; font-weight: 700; }
+
+/* Grid de Ações - Cards Maiores para o Celular */
+.actions-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.card-item {
+    background: #121212;
+    border: 1px solid #222;
+    padding: 25px;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-item:active { transform: scale(0.94); background: #1a1a1a; }
+
+.card-icon { font-size: 2.2rem; margin-right: 22px; }
+.card-info h4 { font-size: 1.25rem; margin-bottom: 4px; font-weight: 700; }
+.card-info p { font-size: 0.95rem; color: #888; }
+
+/* Menu de Baixo */
+.bottom-tab-bar {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: rgba(5, 5, 5, 0.95);
+    backdrop-filter: blur(20px);
+    display: flex;
+    justify-content: space-around;
+    padding: 18px 0;
+    border-top: 1px solid #1a1a1a;
+    max-width: 450px;
+    margin: 0 auto;
+    z-index: 999;
+}
+.tab-item { text-align: center; color: #555; cursor: pointer; flex: 1; }
+.tab-item.active { color: #00ff88; }
+.tab-icon { font-size: 1.7rem; display: block; margin-bottom: 4px; }
+.tab-label { font-size: 0.75rem; font-weight: 700; }
+
+/* Loader - MUDADO PARA display: none PARA NÃO TRAVAR A TELA */
+.loader-container {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: #000;
+    display: none; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+.swiper {
+  width: 100%;
+  padding: 50px 0; /* Espaço para o slide crescer */
+}
+
+.swiper-slide {
+  background: #222;
+  color: #666;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  font-size: 1.2rem;
+  transition: 0.3s; /* Suaviza o aumento de tamanho */
+  opacity: 0.5;
+  transform: scale(0.8); /* Slides laterais ficam menores */
+}
+
+/* ABA SELECIONADA (Centralizada) */
+.swiper-slide-active {
+  background: #ffcc00; /* Cor de destaque */
+  color: #000;
+  opacity: 1;
+  transform: scale(1.2); /* Fica maior que os outros */
+  box-shadow: 0 0 20px rgba(255, 204, 0, 0.4);
+}
+/* Isso impede que o celular fique tentando "selecionar" o texto do botão para pesquisar */
+.btnValor, #btnSacar, h1, h2, p, .bottomNav a {
+    user-select: none; /* Impede a seleção de texto */
+    -webkit-user-select: none;
+    -webkit-touch-callout: none; /* Impede o menu de contexto no iPhone */
+}
+
