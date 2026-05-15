@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Dashboard | Seguro</title>
+
+    <link rel="stylesheet" href="app.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+    <style>
+
+        /* CSS = VISUAL */
+
+        body{
+            -webkit-user-select: none;
+            user-select: none;
+            background-color: #000;
+        }
+
+        /* NÃO ESCONDE MAIS A TELA */
+.app-container{
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+    </style>
+
+</head>
+
+<body oncontextmenu="return false;">
+
+    <!-- LOADER -->
+    <div id="loader" class="loader-container">
+        <div class="spinner"></div>
+        <p>Verificando segurança...</p>
+    </div>
+
+    <!-- APP -->
+    <div class="app-container" id="main-content">
+
+        <header class="balance-card">
+
+            <p id="saudacao-user"
+               style="font-weight:700;font-size:1.1rem;margin-bottom:8px;color:#a0fcf0;">
+               Sincronizando...
+            </p>
+
+            <p style="font-size:0.8rem;opacity:0.8;">
+                SALDO DISPONÍVEL
+            </p>
+
+            <h1 id="saldo-user">R$ 0,00</h1>
+
+            <div class="status-pill">
+                🛡️ Conexão Segura
+            </div>
+
+        </header>
+
+        <main class="actions-grid">
+
+            <h3 class="section-title">
+                Ganhar Dinheiro
+            </h3>
+
+            <div class="card-item"
+                 onclick="seguroNav('../anuncios/index.html')">
+
+                <div class="card-icon">📺</div>
+
+                <div class="card-info">
+                    <h4>Anúncios</h4>
+                    <p>Ganhe por cada vídeo</p>
+                </div>
+
+            </div>
+
+            <div class="card-item"
+                 onclick="seguroNav('../logindiario/index.html')">
+
+                <div class="card-icon">🎁</div>
+
+                <div class="card-info">
+                    <h4>Login Diário</h4>
+                    <p>Resgate seu bônus</p>
+                </div>
+
+            </div>
+
+            <div class="card-item"
+                 onclick="seguroNav('../jogos/index.html')">
+
+                <div class="card-icon">🎮</div>
+
+                <div class="card-info">
+                    <h4>Jogos</h4>
+                    <p>Acumule pontos jogando</p>
+                </div>
+
+            </div>
+
+        </main>
+
+        <nav class="bottom-tab-bar">
+
+            <div class="tab-item active">
+                🏠
+                <span class="tab-label">Início</span>
+            </div>
+
+            <div class="tab-item"
+                 onclick="seguroNav('../saque/index.html')">
+
+                 💎
+                 <span class="tab-label">Saque</span>
+
+            </div>
+
+            <div class="tab-item"
+                 onclick="seguroNav('../perfil-confi/index.html')">
+
+                 👤
+                 <span class="tab-label">Perfil</span>
+
+            </div>
+
+        </nav>
+
+    </div>
+
+    <script type="module" src="home.js"></script>
+
+    <script>
+
+        // JS = FUNCIONAMENTO
+
+        function seguroNav(url){
+            window.location.href = url;
+        }
+
+    </script>
+
+</body>
+</html>
