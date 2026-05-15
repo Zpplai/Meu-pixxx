@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Retro Station | Check-in</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Card de Saldo Superior -->
+        <div class="saldo-card">
+            <p>SALDO ACUMULADO</p>
+            <h2 id="saldo-atual">R$ 0,00</h2>
+        </div>
+
+        <div class="header-nav">
+            <button class="btn-voltar" onclick="window.location.href='../home/index.html'">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            </button>
+            <h1>Calendário de Prêmios</h1>
+        </div>
+
+        <!-- Grade de Dias do Calendário -->
+        <div class="calendario-grid">
+            <div class="dia-card" id="dia-0"><span>SEG</span><div class="icon"></div></div>
+            <div class="dia-card" id="dia-1"><span>TER</span><div class="icon"></div></div>
+            <div class="dia-card" id="dia-2"><span>QUA</span><div class="icon"></div></div>
+            <div class="dia-card" id="dia-3"><span>QUI</span><div class="icon"></div></div>
+            <div class="dia-card" id="dia-4"><span>SEX</span><div class="icon"></div></div>
+            <div class="dia-card" id="dia-5"><span>SÁB</span><div class="icon"></div></div>
+            <div class="dia-card" id="dia-6"><span>DOM</span><div class="icon"></div></div>
+        </div>
+
+        <!-- Área de Ação -->
+        <div class="action-area">
+            <h2 id="recompensa-valor">R$ 0,10</h2>
+            <button id="btn-resgatar" class="btn-principal">CARREGANDO...</button>
+        </div>
+    </div>
+
+    <!-- Container de Animação (Bolsa de Moedas) -->
+    <div id="container-animacao" class="hidden">
+        <div class="overlay-content">
+            <div class="moeda-animada">💰</div>
+            <h2>PARABÉNS!</h2>
+            <p>Sua recompensa foi creditada.</p>
+            <span class="ganho-destaque">+ R$ 0,10</span>
+            <button id="btn-fechar-animacao" class="btn-fechar-link">Toque para fechar</button>
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
