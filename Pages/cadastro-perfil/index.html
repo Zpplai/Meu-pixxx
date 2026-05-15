@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro GanhePix</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="loader" class="loader-container hidden">
+        <div class="spinner"></div>
+        <p>Carregando...</p>
+    </div>
+
+    <div class="step-card">
+        <h1 class="brand">Ganhe<span>pix</span></h1>
+        <div class="progress-container">
+            <div class="bar-bg"><div id="bar" class="bar-fill"></div></div>
+            <span id="step-text">Passo 1/3</span>
+        </div>
+
+        <div class="step active" id="s1">
+            <h3>Como quer ser chamado?</h3>
+            <input type="text" id="setup-nome" placeholder="Seu nome completo">
+            <span id="err-nome" class="error-msg">Digite seu nome para continuar.</span>
+            <button onclick="validarP1()" class="btn-primary">Próximo Passo</button>
+        </div>
+
+        <div class="step" id="s2">
+            <h3>Qual sua idade?</h3>
+            <input type="number" id="setup-idade" placeholder="Ex: 20">
+            <span id="err-idade" class="error-msg">Você deve ter 18 anos ou mais.</span>
+            <button onclick="validarP2()" class="btn-primary">Próximo Passo</button>
+        </div>
+
+        <div class="step" id="s3">
+            <h3>Onde quer receber?</h3>
+            <input type="text" id="setup-pix-titular" placeholder="Titular da Conta">
+            <input type="text" id="setup-pix-banco" placeholder="Instituição Bancária">
+            
+            <select id="setup-pix-tipo" onchange="limparChave()">
+                <option value="CPF">CPF</option>
+                <option value="Telefone">Telefone</option>
+                <option value="Email">E-mail</option>
+                <option value="Aleatoria">Chave Aleatória</option>
+            </select>
+            
+            <input type="text" id="setup-pix-chave" placeholder="000.000.000-00">
+            
+            <label class="terms-area">
+                <input type="checkbox" id="aceitar-termos"> 
+                <span>Confirmo os dados. Não haverá reembolso por erros de digitação.</span>
+            </label>
+
+            <span id="err-final" class="error-msg">Preencha tudo e aceite os termos.</span>
+            <button id="btn-finalizar" class="btn-primary">Finalizar Cadastro</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script type="module" src="completar.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+body { 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    height: 100vh; 
+    margin: 0; 
+    background-color: #0a0a0c; 
+    color: white; 
+    font-family: sans-serif; 
+}
+
+.step-card { 
+    width: 92%; 
+    max-width: 400px; 
+    padding: 25px; 
+    background: rgba(255, 255, 255, 0.05); 
+    backdrop-filter: blur(20px); 
+    border-radius: 30px; 
+    border: 1px solid rgba(255, 255, 255, 0.1); 
+    text-align: center; 
+}
+
+.brand { font-size: 24px; margin-bottom: 20px; }
+.brand span { color: #32bcad; }
+
+.progress-container { display: flex; align-items: center; margin-bottom: 25px; gap: 15px; }
+.bar-bg { flex-grow: 1; height: 6px; background: rgba(255,255,255,0.1); border-radius: 10px; overflow: hidden; }
+.bar-fill { height: 100%; background: #32bcad; width: 33%; transition: 0.5s ease; }
+#step-text { font-size: 12px; color: #a0a0a5; }
+
+.step { display: none; flex-direction: column; gap: 15px; }
+.step.active { display: flex; } 
+
+input, select { 
+    width: 100%; 
+    padding: 15px; 
+    background: rgba(255,255,255,0.07); 
+    border: 1px solid rgba(255,255,255,0.1); 
+    border-radius: 14px; 
+    color: white; 
+    font-size: 16px; 
+    outline: none; 
+    box-sizing: border-box; 
+}
+
+.terms-area { 
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+    margin: 10px 0; 
+    cursor: pointer; 
+    text-align: left; 
+}
+.terms-area input { width: 22px; height: 22px; flex-shrink: 0; }
+.terms-area span { font-size: 12px; color: #a0a0a5; line-height: 1.2; }
+
+.btn-primary { 
+    background: #32bcad; 
+    color: #0a0a0c; 
+    border: none; 
+    padding: 16px; 
+    border-radius: 14px; 
+    font-weight: bold; 
+    cursor: pointer; 
+    width: 100%; 
+}
+
+.btn-primary:disabled {
+    background: #1a5a54;
+    color: #444;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.error-msg { color: #ff4444; font-size: 12px; display: none; text-align: left; font-weight: bold; }
+
+/* Loader */
+.hidden { display: none; }
+
+
+/* Isso impede que o celular fique tentando "selecionar" o texto do botão para pesquisar */
+.btnValor, #btnSacar, h1, h2, p, .bottomNav a {
+    user-select: none; /* Impede a seleção de texto */
+    -webkit-user-select: none;
+    -webkit-touch-callout: none; /* Impede o menu de contexto no iPhone */
+}
+
